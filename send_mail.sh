@@ -38,6 +38,20 @@ whoami=`whoami`
 
 sudo sed -i '/postmaster:    root/a root:          '${SupportEmail}'' /etc/aliases
 sudo sed -i '/root:/a '$whoami':     '${SupportEmail}'' /etc/aliases
+sudo sed -i '/_apt:/a '$whoami':     '${SupportEmail}'' /etc/aliases
+sudo sed -i '/backup:/a '$whoami':     '${SupportEmail}'' /etc/aliases
+sudo sed -i '/bin:/a '$whoami':     '${SupportEmail}'' /etc/aliases
+sudo sed -i '/crypto-data:/a '$whoami':     '${SupportEmail}'' /etc/aliases
+sudo sed -i '/daemon:/a '$whoami':     '${SupportEmail}'' /etc/aliases
+sudo sed -i '/mail:/a '$whoami':     '${SupportEmail}'' /etc/aliases
+sudo sed -i '/messagebus:/a '$whoami':     '${SupportEmail}'' /etc/aliases
+sudo sed -i '/mysql:/a '$whoami':     '${SupportEmail}'' /etc/aliases
+sudo sed -i '/nginx:/a '$whoami':     '${SupportEmail}'' /etc/aliases
+sudo sed -i '/nobody:/a '$whoami':     '${SupportEmail}'' /etc/aliases
+sudo sed -i '/syslog:/a '$whoami':     '${SupportEmail}'' /etc/aliases
+sudo sed -i '/www-data:/a '$whoami':     '${SupportEmail}'' /etc/aliases
+sudo sed -i '/$whoami:/a '$whoami':     '${SupportEmail}'' /etc/aliases
+
 sudo newaliases
 
 sudo adduser $whoami mail
