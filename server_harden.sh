@@ -26,5 +26,7 @@ echo 'net.ipv4.tcp_timestamps = 1' | hide_output sudo tee -a /etc/sysctl.conf
 echo 'net.ipv4.tcp_sack = 1' | hide_output sudo tee -a /etc/sysctl.conf
 echo 'net.ipv4.tcp_no_metrics_save = 1' | hide_output sudo tee -a /etc/sysctl.conf
 echo 'net.core.netdev_max_backlog = 5000' | hide_output sudo tee -a /etc/sysctl.conf
+echo 'vm.swappiness=10' | hide_output sudo tee -a /etc/sysctl.conf
+echo 'vm.vfs_cache_pressure = 50' | hide_output sudo tee -a /etc/sysctl.conf
 echo -e "$GREEN Tuning complete...$COL_RESET"
 cd $HOME/multipool/yiimp_single
